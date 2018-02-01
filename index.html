@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Blog | Gabe Morse Senior Project</title>
+        <link rel='stylesheet' type='text/css' href='style.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id='mobilemenu' class='invisible'>
+                <h3 class='mtitle'>Posts</h3>
+                <ul>
+                    <li onclick='toggleMenu()'><a href='#3'>Post 3</a></li>
+                    <li onclick='toggleMenu()'><a href='#2'>Post 2</a></li>
+                    <li onclick='toggleMenu()'><a href='#1'>Post 1</a></li>
+                </ul>
+        </div>
+        <a name='top'></a>
+        <div id='header'>
+            <h1>Learning Sketch-up</h1>
+            <h2>Gabe Morse Senior Project Blog</h2>
+        </div>
+        <div id='wrapper'>
+            <div id='lwrap'>
+                <div id='main'>
+                    <div id='mobilebutton' onclick='toggleMenu()'>
+                        <h2><a href='#top'>&equiv;</a></h2>
+                    </div>
+                    <div class='post'>
+    			<a name='4'></a> <!-- post number for reference in menu -->
+    			<h3>#</h3> <!-- Post Title -->
+  			<h4>#</h4> <!-- Post Subtitle - I use this for the date -->
+    			<p>#</p> <!-- Post Text -->
+   
+	<!-- Put in multiple paragraphs with a new set of <p></p>
+         Embed YouTube videos by pasting their embed codes
+         Put in subheadings with <h5></h5> or <h6></h6>
+         Put in images with <img src='#' alt='#'> 
+         src is the url for the image, alt is the text to display if it fails
+    -->
+		</div>
+		 <div class='post'>
+    			<a name='3'></a> <!-- post number for reference in menu -->
+    			<h3>#</h3> <!-- Post Title -->
+  			<h4>#</h4> <!-- Post Subtitle - I use this for the date -->
+    			<p>#</p> <!-- Post Text -->
+   
+	<!-- Put in multiple paragraphs with a new set of <p></p>
+         Embed YouTube videos by pasting their embed codes
+         Put in subheadings with <h5></h5> or <h6></h6>
+         Put in images with <img src='#' alt='#'> 
+         src is the url for the image, alt is the text to display if it fails
+    -->
+		</div>
+		 <div class='post'>
+    			<a name='2'></a> <!-- post number for reference in menu -->
+    			<h3>#</h3> <!-- Post Title -->
+  			<h4>#</h4> <!-- Post Subtitle - I use this for the date -->
+    			<p>#</p> <!-- Post Text -->
+   
+	<!-- Put in multiple paragraphs with a new set of <p></p>
+         Embed YouTube videos by pasting their embed codes
+         Put in subheadings with <h5></h5> or <h6></h6>
+         Put in images with <img src='#' alt='#'> 
+         src is the url for the image, alt is the text to display if it fails
+    -->
+		</div>
+		 <div class='post'>
+    			<a name='1'></a> <!-- post number for reference in menu -->
+    			<h3>Who knew knobs were so hard?</h3> <!-- Post Title -->
+  			<h4>January 23</h4> <!-- Post Subtitle - I use this for the date -->
+    			<p>Today I worked on creating an oven from scratch. While I initially thought this would be a reasonably quick project, this quickly turned into a much more complicated endeavor. My biggest struggle was a tiny detail, adding flattened cones to the tops of the knobs. I eventually turned to the sketchup help center, from which I was able to infer the information I needed. This was important for several reasons. One, I learned a new skill, but more importantly I discovered a valuable resource I can use in the future when I encounter problems. Next week, I plan to complete the top of my stove. This includes burners and racks. I believe this will go faster as I am not working inside the model itself.</p> <!-- Post Text -->
+
+	<!-- Put in multiple paragraphs with a new set of <p></p>
+         Embed YouTube videos by pasting their embed codes
+         Put in subheadings with <h5></h5> or <h6></h6>
+         Put in images with <img src='#' alt='#'> 
+         src is the url for the image, alt is the text to display if it fails
+    -->
+		</div>
+  	</div>
+                <div id='footer'>
+                    <h4><a href='#top'>Back to Top</a></h4>
+                </div>
+            </div>
+            <div id='sidebar'>
+                <div id='menu'>
+                    <h3 class='mtitle'>Posts</h3>
+                    <ul id='mlist'>
+                        <li><a href='#3'>Post 3</a></li>
+                        <li><a href='#2'>Post 2</a></li>
+                        <li><a href='#1'>Post 1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <script>
+        function noscroll() {
+            window.scrollTo(0,0);
+        }
+        function toggleMenu() {
+            console.log('Fired');
+            var m = document.getElementById('mobilemenu');
+            if (m.classList.contains('invisible')) {
+                m.classList.remove('invisible');
+                window.addEventListener('scroll', noscroll);
+                document.body.classList.add('noscroll');
+            }
+            else {
+                m.classList.add('invisible');
+                window.removeEventListener('scroll', noscroll);
+                document.body.classList.remove('noscroll');
+            }
+        }       
+        function scrolled() {
+            var ms = document.getElementById('mobilebutton');
+            var sb = document.getElementById('menu');
+            var h = document.getElementById('header');
+            var hr = h.getBoundingClientRect();
+            if (window.pageYOffset > hr.height) {
+                ms.classList.add('buttonscrolled');
+                ms.style.position = 'fixed';
+                sb.style.position = 'fixed';
+                sb.style.width = '20%';
+            }
+            else {
+                ms.classList.remove('buttonscrolled');
+                ms.style.position = 'absolute';
+                sb.style.position = 'relative';
+                sb.style.width = '100%';
+            }
+        }
+        window.onscroll = function () {
+            scrolled();
+        };
+    </script>
+    </body>
+</html>

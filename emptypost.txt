@@ -1,0 +1,36 @@
+<!-- SKELETON POST -->
+
+<!-- Replace #'s as directed by corresponding comments -->
+<!-- Copy new posts into index.html directly below the closing tag of the
+mobile menu:
+
+<div id='mobilemenu'>
+
+</div>
+
+RIGHT HERE-->
+
+<!-- Make sure to update the mobile AND the pc menus (see below) -->
+
+<div class='post'>
+    <a name='#'></a> <!-- post number for reference in menu -->
+    <h3>#</h3> <!-- Post Title -->
+    <h4>#</h4> <!-- Post Subtitle - I use this for the date -->
+    <p>#</p> <!-- Post Text -->
+   
+	<!-- Put in multiple paragraphs with a new set of <p></p>
+         Embed YouTube videos by pasting their embed codes
+         Put in subheadings with <h5></h5> or <h6></h6>
+         Put in images with <img src='#' alt='#'> 
+         src is the url for the image, alt is the text to display if it fails
+    -->
+</div>
+
+<!-- SKELETON MENU ENTRY -->
+
+<!-- Make sure 
+
+<li><a href='$'>#</a></li> 
+<!-- $: #(yourpostnumber) - the hashtag is important
+     #: Text of your link
+-->
